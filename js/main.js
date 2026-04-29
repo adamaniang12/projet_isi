@@ -6,3 +6,13 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('navbar-scrolled');
     }
 });
+
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Logique pour incrémenter le nombre de 0 à X
+            // pendant environ 2 secondes
+        }
+    });
+}, { threshold: 0.5 }); // Déclenche quand 50% de l'élément est visible
