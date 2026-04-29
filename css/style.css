@@ -38,3 +38,30 @@ body {
     font-weight: bold;
     color: var(--accent-color) !important;
 }
+
+/* Conteneur de la grille Bento */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+    grid-template-rows: auto;
+    gap: 20px; /* Espace entre les cartes */
+}
+
+/* Exemple de carte qui prend plus de place (2 colonnes) */
+.bento-item-large {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+/* Animation de survol pour les catégories */
+.category-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
