@@ -1,0 +1,16 @@
+:root {
+    /* Définis au moins 6 variables ici [cite: 103] */
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --dark-bg: #121212;
+    --light-bg: #f8f9fa;
+    --accent-color: #ffc107;
+    --main-font: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--main-font);
+    background-color: var(--light-bg);
+    margin: 0;
+    padding: 0;
+}
