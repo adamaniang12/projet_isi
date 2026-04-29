@@ -1,16 +1,40 @@
+/* Importation des Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400&display=swap');
+
 :root {
-    /* Définis au moins 6 variables ici [cite: 103] */
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --dark-bg: #121212;
-    --light-bg: #f8f9fa;
-    --accent-color: #ffc107;
-    --main-font: 'Roboto', sans-serif;
+    /* 6 variables obligatoires [cite: 103] */
+    --primary-color: #2D3436;    /* Anthracite moderne */
+    --accent-color: #00CEC9;     /* Turquoise tech */
+    --text-dark: #2D3436;
+    --text-light: #FFFFFF;
+    --bg-light: #F9F9F9;
+    --font-titles: 'Montserrat', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+/* Reset de base  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: var(--main-font);
-    background-color: var(--light-bg);
-    margin: 0;
-    padding: 0;
+    font-family: var(--font-body);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Style de la Navbar  */
+.navbar {
+    background-color: var(--text-light) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-family: var(--font-titles);
+    font-weight: bold;
+    color: var(--accent-color) !important;
 }
