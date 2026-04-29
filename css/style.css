@@ -65,3 +65,23 @@ body {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+
+/* Style par défaut (Desktop) déjà fait au commit précédent */
+
+/* Adaptation pour Tablette (max 992px) */
+@media (max-width: 992px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr); /* On passe à 2 colonnes */
+    }
+}
+
+/* Adaptation pour Mobile (max 576px) */
+@media (max-width: 576px) {
+    .bento-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+    
+    h1 {
+        font-size: 2rem; /* On réduit la taille des titres */
+    }
+}
