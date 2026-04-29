@@ -85,3 +85,15 @@ body {
         font-size: 2rem; /* On réduit la taille des titres */
     }
 }
+
+/* Styles pour le mode sombre */
+body.dark-mode {
+    --bg-light: #121212;      /* Fond sombre */
+    --text-dark: #f8f9fa;     /* Texte clair */
+    --white: #1e1e1e;         /* Cartes sombres */
+}
+
+/* Transition douce lors du changement */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

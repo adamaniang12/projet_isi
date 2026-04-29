@@ -98,3 +98,43 @@ contactForm.addEventListener('submit', (e) => {
         document.querySelectorAll('.is-valid').forEach(el => el.classList.remove('is-valid'));
     }
 });
+
+
+/**
+ * Initialisation du thème au chargement de la page
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    const themeBtn = document.getElementById('theme-toggle'); // Assure-toi d'avoir cet ID sur ton bouton
+
+    // Vérifie si un thème était déjà enregistré
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        if(themeBtn) themeBtn.innerHTML = '<i class="bi bi-sun-fill"></i>'; // Icône Soleil si mode sombre
+    }
+});
+
+/**
+ * Gère le basculement entre le mode sombre et le mode clair.
+ * Utilise le localStorage pour la persistance.
+ */
+function toggleDarkMode() {
+    const isDark = document.body.classList.toggle('dark-mode');
+    const themeBtn = document.getElementById('theme-toggle');
+    
+    // Mise à jour de la persistance
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    
+    // Mise à jour de l'icône (Soleil pour repasser au clair, Lune pour repasser au sombre)
+    if(themeBtn) {
+        themeBtn.innerHTML = isDark ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-fill"></i>';
+    }
+
+    console.log(`Thème changé : ${isDark ? 'Sombre' : 'Clair'}`);
+}
+
+// Écouteur d'événement sur le bouton de thème
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+    themeToggle.addEventListener('click', toggleDarkMode);
+}
